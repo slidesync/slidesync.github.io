@@ -2,7 +2,8 @@
 import '@fontsource-variable/open-sans'
 import { Image } from 'astro:assets'
 import Logo from '../../public/slidesync.svg'
-import Home from './Home.astro'
+import Home from '../components/Home/Hero.astro'
+import Steps from '../components/Home/Steps.astro'
 
 ---
 
@@ -17,5 +18,6 @@ import Home from './Home.astro'
   </head>
   <body>
       <Home/>
+      <Steps />
   </body>
 </html>
