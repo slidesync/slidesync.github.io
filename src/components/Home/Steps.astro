@@ -1,5 +1,37 @@
-<div class="p-12 bg-slate-200 font-sora">
-    <h2 class="text-3xl font-semibold text-center">Get Up to Speed in 4 Easy Steps</h2>
+---
+const steps = [
+  {
+    title: "Download",
+    description: "Download the desktop app and install it on your computer.",
+  },
+  {
+    title: "Launch",
+    description: "Open SlideSync Client on your mobile device",
+  },
+  {
+    title: "Connect",
+    description:
+      "Scan the QR or enter the code to connect your device to the desktop app.",
+  },
+  {
+    title: "Control",
+    description: "Use your mobile device to control your presentation.",
+  },
+];
+---
 
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur neque quo, veniam suscipit est ab cum quod error. Error, quas asperiores, culpa saepe nulla quisquam beatae tempora dolores reiciendis blanditiis nemo quos, corporis sit eius facilis sunt odit quasi dolore adipisci. Sed animi aliquam maiores rerum laboriosam corrupti, fugiat dolore, ipsa facilis voluptatum distinctio? Quia sed adipisci illum iste nisi repudiandae, inventore explicabo facilis sint natus rerum possimus animi ducimus ea velit sunt consequatur alias. Consectetur minima tempora repudiandae sapiente illum iure corrupti vitae commodi atque, natus, ad voluptates. Libero fugiat perspiciatis eligendi ullam officiis? Eaque eum omnis adipisci dolorum harum. Neque quisquam veniam repellat earum repudiandae fugit sequi eaque. Maiores nisi doloribus pariatur aliquam ipsa reprehenderit recusandae dolorem. Repudiandae voluptas voluptatem delectus accusantium ipsa optio et quis eum ab aspernatur. Amet incidunt corporis porro labore ipsa eius eveniet aspernatur suscipit? Tempore aliquam voluptatibus maxime nostrum dicta eos amet temporibus.</p>
-</div>
+<section class="p-12 pb-60 bg-slate-200">
+  <h2 class="text-3xl font-semibold text-center font-sora">
+    Get Up to Speed in 4 Easy Steps
+  </h2>
+  <div class="grid grid-cols-4 gap-3">
+    {
+      steps.map((step, index) => (
+        <div>
+          <h3 class="text-2xl font-semibold mt-8">{step.title}</h3>
+          <p class="mt-2">{step.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>
