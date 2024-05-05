@@ -1,37 +1,57 @@
 ---
+// import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import connect from "../../../src/images/connect.svg";
+import control from "../../../src/images/control.svg";
+import download from "../../../src/images/download.svg";
+import launch from "../../../src/images/launch.svg";
+
 const steps = [
   {
     title: "Download",
+    icon: download,
     description: "Download the desktop app and install it on your computer.",
   },
   {
     title: "Launch",
+    icon: launch,
     description: "Open SlideSync Client on your mobile device",
   },
   {
     title: "Connect",
+    icon: connect,
     description:
       "Scan the QR or enter the code to connect your device to the desktop app.",
   },
   {
     title: "Control",
+    icon: control,
     description: "Use your mobile device to control your presentation.",
   },
 ];
 ---
 
-<section class="p-12 pb-60 bg-slate-200">
+<section class="p-12 bg-slate-100">
   <h2 class="text-3xl font-semibold text-center font-sora">
     Get Up to Speed in 4 Easy Steps
   </h2>
-  <div class="grid grid-cols-4 gap-3">
+  <div class="grid grid-cols-4 gap-3 py-24">
     {
       steps.map((step, index) => (
-        <div>
+        <div class="flex flex-col items-center justify-center">
+          {/* <Icon name="connect" /> */}
+          <Image src={step.icon} alt={step.title} class="w-16 h-16 mx-auto" />
           <h3 class="text-2xl font-semibold mt-8">{step.title}</h3>
-          <p class="mt-2">{step.description}</p>
+          <div class="w-7 h-1 bg-primary mt-2" />
+          <p class="mt-2 text-center">{step.description}</p>
         </div>
       ))
     }
   </div>
 </section>
+
+<h2
+  class="py-32 font-sora text-5xl font-semibold text-center bg-gradient-primary text-transparent bg-clip-text"
+>
+  Simple. Secure. Seamless.
+</h2>
