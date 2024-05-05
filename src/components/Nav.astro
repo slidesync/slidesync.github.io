@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Logo from "../../public/slidesync.svg";
+import QRLogo from "../../public/qr_code_scanner.svg" 
 ---
 
 <nav class="flex items-center justify-between px-8 py-4">
@@ -19,9 +20,9 @@ import Logo from "../../public/slidesync.svg";
     <a href="#" class="mr-16 font-sans">DOWNLOADS</a>
     <!-- Button -->
     <button
-      class="bg-primary hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-xl"
+      class="bg-primary hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-xl flex items-center"
     >
-      Go to Mobile Client
+      Mobile Client |   <Image src={QRLogo} alt="SlideSync Logo" width={20} class={"m-1 fill-white"} /> 
     </button>
   </div>
 </nav>
