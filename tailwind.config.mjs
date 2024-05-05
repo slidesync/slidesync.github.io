@@ -9,7 +9,7 @@ export default {
     extend: {
       colors: {
         primary: "#1899E9", // Define your custom color
-		
+
       },
       fontFamily: {
         sans: ["Open Sans Variable", ...defaultTheme.fontFamily.sans],
@@ -18,6 +18,7 @@ export default {
 	  scale: {
         '175': '1.75',
 		'200': '2',
+		'300': '3',
       },
     },
   },
