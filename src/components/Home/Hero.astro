@@ -3,14 +3,14 @@ import Nav from "../Nav.astro";
 ---
 
 <div class="flex flex-col">
-  <div>
-    <Nav />
-  </div>
+  <Nav />
 
-  <div class="w-full h-full p-8 relative md:flex md:flex-row overflow-hidden">
+  <section
+    class="w-full h-full py-12 relative md:flex md:flex-row overflow-hidden"
+  >
     <!-- Left div with text -->
-    <div class="w-full md:w-1/2 p-6">
-      <p class="text-[3rem] font-bold mt-6">
+    <div class="w-full md:w-6/12 lg:8/12 px-16">
+      <p class="text-5xl font-bold mt-6">
         <span
           class="bg-gradient-primary inline-block text-transparent bg-clip-text"
           >Seamless Control</span
@@ -20,7 +20,7 @@ import Nav from "../Nav.astro";
         SlideSync enables you to achieve <br /> something in your life.
       </p>
       <button
-        class="bg-primary hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-xl mt-10 mb-10"
+        class="bg-primary hover:bg-primaryDark text-white font-semibold py-3 px-4 rounded-xl mt-10 mb-10"
       >
         Download for Mac(Universal)
       </button>
@@ -34,13 +34,14 @@ import Nav from "../Nav.astro";
     </div>
 
     <!-- Right div with images -->
-    <div class="w-1/2 h-full relative mt-28 md:mt-16">
+    <div
+      class="relative md:w-8/12 lg:w-7/12 mt-12 md:mt-0 md:transform md:translate-x-36"
+    >
       <img
         src="../../public/images/combo.png"
         alt="NoImage"
-        class="pt-6 md:scale-125 md:transform md:translate-x-[7rem] scale-[3] translate-x-[10rem] pb-12"
+        class="h-full w-full object-contain"
       />
-      <div></div>
     </div>
-  </div>
+  </section>
 </div>

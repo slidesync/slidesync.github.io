@@ -1,28 +1,32 @@
 ---
 import { Image } from "astro:assets";
 import Logo from "../../public/slidesync.svg";
-import QRLogo from "../../public/qr_code_scanner.svg" 
+import QRLogo from "../../public/qr.svg";
 ---
 
-<nav class="flex items-center justify-between px-8 py-4">
+<nav class="flex items-center justify-between px-16 py-4">
   <div class="flex items-center">
     <!-- Logo -->
     <Image src={Logo} alt="SlideSync Logo" width={50} />
     <!-- Text -->
-    <span class="text-3xl font-bold font-sora" >SlideSync</span>
+    <span class="text-3xl font-bold font-sora">SlideSync</span>
   </div>
 
-
-  <div class="flex items-center p-4">
+  <div class="flex items-center p-4 gap-6">
     <!-- Anchor tag -->
-    <a href="#" class="md:mr-16 font-sans">DOCS</a>
+    <a href="#">DOCS</a>
 
-    <a href="#" class="md:mr-16 font-sans">DOWNLOADS</a>
+    <a href="#">DOWNLOADS</a>
     <!-- Button -->
     <button
-      class="bg-primary hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-xl flex items-center md:text-xl text-xs"
+      class="bg-primary hover:bg-primaryDark text-white font-semibold py-2 px-3 rounded-lg flex items-center"
     >
-      Mobile Client |   <Image src={QRLogo} alt="SlideSync Logo" width={15} class={"m-1 fill-white"} /> 
+      Mobile Client | <Image
+        src={QRLogo}
+        alt="SlideSync Logo"
+        width={15}
+        class={"m-1 fill-white"}
+      />
     </button>
   </div>
 </nav>

@@ -12,6 +12,7 @@ export default {
       }),
       colors: {
         primary: "#1899E9", // Define your custom color
+        primaryDark: "#1178c1"
       },
       fontFamily: {
         sans: ["Open Sans Variable", ...defaultTheme.fontFamily.sans],
