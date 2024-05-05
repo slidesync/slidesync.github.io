@@ -2,9 +2,12 @@
 import '@fontsource-variable/open-sans'
 import { Image } from 'astro:assets'
 import Logo from '../../public/slidesync.svg'
+import Home from './Home.astro'
+
 ---
 
 <html lang="en">
+  
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,11 +16,6 @@ import Logo from '../../public/slidesync.svg'
     <title>SlideSync</title>
   </head>
   <body>
-    <div
-      class="container flex flex-col items-center justify-center gap-8 p-8 min-h-[82vh]"
-    >
-      <Image src={Logo} alt="SlideSync Logo" width={200} />
-      <h1 class="text-5xl text-center font-semibold">SlideSync</h1>
-    </div>
+      <Home/>
   </body>
 </html>

@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../../public/slidesync.svg";
+---
+
+<nav class="flex items-center justify-between px-8 py-4">
+  <div class="flex items-center">
+    <!-- Logo -->
+    <Image src={Logo} alt="SlideSync Logo" width={50} />
+    <!-- Text -->
+    <span class="text-3xl font-bold font-sora">SlideSync</span>
+  </div>
+
+
+  <div class="flex items-center p-4">
+    <!-- Anchor tag -->
+    <a href="#" class="mr-16 font-sans">DOCS</a>
+
+    <a href="#" class="mr-16 font-sans">DOWNLOADS</a>
+    <!-- Button -->
+    <button
+      class="bg-primary hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-xl"
+    >
+      Go to Mobile Client
+    </button>
+  </div>
+</nav>
