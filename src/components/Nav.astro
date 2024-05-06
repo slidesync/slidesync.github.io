@@ -2,9 +2,19 @@
 import { Image } from "astro:assets";
 import Logo from "../../public/slidesync.svg";
 import QRLogo from "../../public/qr.svg";
+import close from "../../public/close.svg";
+import menu from "../../public/menu.svg";
+import Sidebar from "./Sidebar.astro";
 ---
 
-<nav class="flex items-center justify-between px-16 py-4">
+<script>
+  let sideBarOpen = false;
+  const openMenu = () => {
+    sideBarOpen = !sideBarOpen;
+  };
+</script>
+
+<nav class="flex relative items-center justify-between px-8 sm:px-16 py-8">
   <div class="flex items-center">
     <!-- Logo -->
     <Image src={Logo} alt="SlideSync Logo" width={50} />
@@ -12,7 +22,17 @@ import QRLogo from "../../public/qr.svg";
     <span class="text-3xl font-bold font-sora">SlideSync</span>
   </div>
 
-  <div class="flex items-center p-4 gap-6">
+  <div
+    id="side-menu"
+    class="flex flex-col p-8 gap-12 h-screen transition-transform z-50 bg-slate-100 w-full fixed top-0 right-0 left-0 md:hidden"
+  >
+    <button class="menu-btn md:hidden self-end">
+      <Image src={close} alt="menu" width={35} class="md:hidden" />
+    </button>
+    <Sidebar />
+  </div>
+
+  <div class={`hidden md:flex items-center gap-6`}>
     <!-- Anchor tag -->
     <a href="#">DOCS</a>
 
@@ -21,7 +41,7 @@ import QRLogo from "../../public/qr.svg";
     <button
       class="bg-primary hover:bg-primaryDark text-white font-semibold py-2 px-3 rounded-lg flex items-center"
     >
-      Mobile Client | <Image
+      Mobile Client <Image
         src={QRLogo}
         alt="SlideSync Logo"
         width={15}
@@ -29,4 +49,39 @@ import QRLogo from "../../public/qr.svg";
       />
     </button>
   </div>
+
+  <button class="menu-btn md:hidden">
+    <Image src={menu} alt="menu" width={35} class="md:hidden translate-x-0" />
+  </button>
 </nav>
+
+<script>
+  let sidebarOpen = false;
+  const openMenu = () => {
+    sidebarOpen = !sidebarOpen;
+    console.log("clicked");
+    $: if (sidebarOpen) {
+      document
+        .querySelector("#side-menu")
+        ?.classList.remove("transform", "translate-x-full");
+    } else {
+      document
+        .querySelector("#side-menu")
+        ?.classList.add("transform", "translate-x-full");
+    }
+  };
+  let menuBtn = document.querySelectorAll(".menu-btn");
+  menuBtn.forEach((btn) => {
+    btn.addEventListener("click", openMenu);
+  });
+
+  $: if (sidebarOpen) {
+    document
+      .querySelector("#side-menu")
+      ?.classList.remove("transform", "translate-x-full");
+  } else {
+    document
+      .querySelector("#side-menu")
+      ?.classList.add("transform", "translate-x-full");
+  }
+</script>
