@@ -1,22 +1,21 @@
 ---
-import { Image } from "astro:assets";
-import QRLogo from "../../public/qr.svg";
+import { Image } from 'astro:assets'
+import QRLogo from '../../public/qr.svg'
 ---
 
 <div class={`flex flex-col items-start gap-12`}>
   <!-- Anchor tag -->
-  <a href="#" class="text-lg">DOCS</a>
+  <a href='#' class='text-lg'>DOCS</a>
 
-  <a href="#" class="text-lg">DOWNLOADS</a>
+  <a href='#' class='text-lg'>DOWNLOADS</a>
   <!-- Button -->
   <button
-    class="bg-primary hover:bg-primaryDark text-white font-semibold py-2 px-3 rounded-lg flex items-center"
-  >
+    class='bg-primary hover:bg-primaryDark text-white font-semibold py-2 px-3 rounded-lg flex items-center'>
     Mobile Client <Image
       src={QRLogo}
-      alt="SlideSync Logo"
+      alt='SlideSync Logo'
       width={15}
-      class={"m-1 fill-white"}
+      class={'m-1 fill-white'}
     />
   </button>
 </div>
