@@ -1,4 +1,8 @@
 {
-  "recommendations": ["astro-build.astro-vscode"],
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "christian-kohler.path-intellisense",
+    "esbenp.prettier-vscode"
+  ],
   "unwantedRecommendations": []
 }
