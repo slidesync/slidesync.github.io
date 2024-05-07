@@ -1,0 +1,70 @@
+---
+import { Image } from 'astro:assets'
+
+const col1Links = [
+  {
+    label: 'View Repository',
+    href: '#',
+  },
+  {
+    label: 'Code of Conduct',
+    href: '#',
+  },
+  {
+    label: 'Privacy Policy',
+    href: '#',
+  },
+]
+
+const col2Links = [
+  {
+    label: 'View Repository',
+    href: '#',
+  },
+  {
+    label: 'Code of Conduct',
+    href: '#',
+  },
+  {
+    label: 'Privacy Policy',
+    href: '#',
+  },
+]
+---
+
+<footer class='bg-[#2a2a2a]'>
+  <div class='app-container'>
+    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+      <div class='md:col-span-2 lg:col-span-1'>
+        <Image
+          src='/slidesync-mono-dark.svg'
+          alt='SlideSync'
+          width={200}
+          height={40}
+        />
+      </div>
+      <div class='flex flex-col gap-4'>
+        {
+          col1Links.map((link) => (
+            <a href={link.href} class='text-white hover:text-gray-300'>
+              {link.label}
+            </a>
+          ))
+        }
+      </div>
+      <div class='flex flex-col gap-4'>
+        {
+          col2Links.map((link) => (
+            <a href={link.href} class='text-white hover:text-gray-300'>
+              {link.label}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <div
+    class='container px-4 text-center text-neutral-200 border-t-[0.5px] py-4'>
+    <p>Made with ❤️ Team SlideSync</p>
+  </div>
+</footer>

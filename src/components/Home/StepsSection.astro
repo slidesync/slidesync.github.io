@@ -1,0 +1,53 @@
+---
+// import { Icon } from "astro-icon/components";
+import { Image } from 'astro:assets'
+import connect from '../../../src/images/connect.svg'
+import control from '../../../src/images/control.svg'
+import download from '../../../src/images/download.svg'
+import launch from '../../../src/images/launch.svg'
+
+const steps = [
+  {
+    title: 'Download',
+    icon: download,
+    description: 'Download the desktop app and install it on your computer.',
+  },
+  {
+    title: 'Launch',
+    icon: launch,
+    description: 'Open SlideSync Client on your mobile device',
+  },
+  {
+    title: 'Connect',
+    icon: connect,
+    description:
+      'Scan the QR or enter the code to connect your device to the desktop app.',
+  },
+  {
+    title: 'Control',
+    icon: control,
+    description: 'Use your mobile device to control your presentation.',
+  },
+]
+---
+
+<div class='bg-slate-100'>
+  <section class='app-container'>
+    <h2 class='text-4xl font-semibold text-center font-sora'>
+      Get Up to Speed in 4 Easy Steps
+    </h2>
+    <div
+      class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pt-16 place-items-start justify-items-center'>
+      {
+        steps.map((step, index) => (
+          <div class='flex flex-col gap-3 items-center justify-center'>
+            <Image src={step.icon} alt={step.title} class='w-16 h-16 mx-auto' />
+            <h3 class='text-2xl font-semibold mt-3'>{step.title}</h3>
+            <div class='w-7 h-1 rounded-full bg-primary' />
+            <p class='text-center'>{step.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</div>
