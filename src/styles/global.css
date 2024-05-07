@@ -1,0 +1,3 @@
+.appcontainer {
+  @apply container mx-auto px-8 py-4;
+}
