@@ -1,51 +1,50 @@
 ---
 // import { Icon } from "astro-icon/components";
-import { Image } from "astro:assets";
-import connect from "../../../src/images/connect.svg";
-import control from "../../../src/images/control.svg";
-import download from "../../../src/images/download.svg";
-import launch from "../../../src/images/launch.svg";
+import { Image } from 'astro:assets'
+import connect from '../../../src/images/connect.svg'
+import control from '../../../src/images/control.svg'
+import download from '../../../src/images/download.svg'
+import launch from '../../../src/images/launch.svg'
 
 const steps = [
   {
-    title: "Download",
+    title: 'Download',
     icon: download,
-    description: "Download the desktop app and install it on your computer.",
+    description: 'Download the desktop app and install it on your computer.',
   },
   {
-    title: "Launch",
+    title: 'Launch',
     icon: launch,
-    description: "Open SlideSync Client on your mobile device",
+    description: 'Open SlideSync Client on your mobile device',
   },
   {
-    title: "Connect",
+    title: 'Connect',
     icon: connect,
     description:
-      "Scan the QR or enter the code to connect your device to the desktop app.",
+      'Scan the QR or enter the code to connect your device to the desktop app.',
   },
   {
-    title: "Control",
+    title: 'Control',
     icon: control,
-    description: "Use your mobile device to control your presentation.",
+    description: 'Use your mobile device to control your presentation.',
   },
-];
+]
 ---
 
-<section class="px-16 py-24 bg-slate-100">
-  <h2 class="text-4xl font-semibold text-center font-sora">
+<section class='px-16 py-24 bg-slate-100'>
+  <h2 class='text-4xl font-semibold text-center font-sora'>
     Get Up to Speed in 4 Easy Steps
   </h2>
   <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 py-24 place-items-start justify-items-center"
-  >
+    class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 py-24 place-items-start justify-items-center'>
     {
       steps.map((step, index) => (
-        <div class="flex flex-col items-center justify-center">
+        <div class='flex flex-col items-center justify-center'>
           {/* <Icon name="connect" /> */}
-          <Image src={step.icon} alt={step.title} class="w-16 h-16 mx-auto" />
-          <h3 class="text-2xl font-semibold mt-8">{step.title}</h3>
-          <div class="w-7 h-1 bg-primary mt-2" />
-          <p class="mt-2 text-center text-lg">{step.description}</p>
+          <Image src={step.icon} alt={step.title} class='w-16 h-16 mx-auto' />
+          <h3 class='text-2xl font-semibold mt-8'>{step.title}</h3>
+          <div class='w-7 h-1 bg-primary mt-2' />
+          <p class='mt-2 text-center text-lg'>{step.description}</p>
         </div>
       ))
     }
@@ -53,7 +52,6 @@ const steps = [
 </section>
 
 <h2
-  class="py-32 font-sora text-5xl font-semibold text-center bg-gradient-primary text-transparent bg-clip-text"
->
+  class='py-32 font-sora text-5xl font-semibold text-center bg-gradient-primary text-transparent bg-clip-text'>
   Simple. Secure. Seamless.
 </h2>
