@@ -1,7 +1,11 @@
 .app-container {
-  @apply container mx-auto px-8 py-24;
+  @apply container mx-auto px-8 md:px-16 py-24;
 }
 
 .btn-primary {
   @apply bg-primary hover:bg-primaryDark text-white font-semibold py-3 px-4 rounded-xl;
+}
+
+.btn-white {
+  @apply bg-white hover:bg-primaryDark text-black font-semibold py-3 px-4 rounded-xl w-fit;
 }
