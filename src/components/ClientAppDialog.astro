@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets'
+import QRLogo from '../../public/qr-black.svg'
+import close from '../../public/cross.svg'
+---
+
+<div
+  class='relative p-8 text-center rounded-xl bg-white shadow-md shadow-slate-600 flex flex-col items-center gap-4 z-[100]'>
+  <h2 class='text-xl font-semibold text-primaryDark'>
+    SlideSync Mobile Client
+  </h2>
+  <!-- QR Code -->
+
+  <Image src={QRLogo} alt='SlideSync Logo' width={85} class='' />
+
+  <p class='text-lg'>Scan the QR or visit slidesyncmobile.web.app</p>
+
+  <button class='absolute right-4 top-4'>
+    <Image src={close} width={36} alt={'close'} />
+  </button>
+</div>
