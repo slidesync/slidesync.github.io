@@ -7,13 +7,6 @@ import menu from '../../public/menu.svg'
 import Sidebar from './Sidebar.astro'
 ---
 
-<script>
-  let sideBarOpen = false
-  const openMenu = () => {
-    sideBarOpen = !sideBarOpen
-  }
-</script>
-
 <nav class='flex relative items-center justify-between px-8 sm:px-16 py-8'>
   <div class='flex items-center'>
     <!-- Logo -->
@@ -38,6 +31,7 @@ import Sidebar from './Sidebar.astro'
     <a href='#'>DOWNLOADS</a>
     <!-- Button -->
     <button
+      id='client-btn'
       class='bg-primary hover:bg-primaryDark text-white font-semibold py-2 px-3 rounded-lg flex items-center'>
       Mobile Client <Image
         src={QRLogo}
@@ -82,4 +76,13 @@ import Sidebar from './Sidebar.astro'
       .querySelector('#side-menu')
       ?.classList.add('transform', 'translate-x-full')
   }
+
+  const openDialog = () => {
+    console.log('clicked')
+    dialogBox?.classList.remove('hidden')
+  }
+
+  const dialogBox = document.getElementById('dialogBox')
+  const clientBtn = document.getElementById('client-btn')
+  clientBtn?.addEventListener('click', openDialog)
 </script>

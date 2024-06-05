@@ -15,7 +15,18 @@ import close from '../../public/cross.svg'
 
   <p class='text-lg'>Scan the QR or visit slidesyncmobile.web.app</p>
 
-  <button class='absolute right-4 top-4'>
+  <button class='absolute right-4 top-4' id='closeBtn'>
     <Image src={close} width={36} alt={'close'} />
   </button>
 </div>
+
+<script>
+  const dialogBox = document.getElementById('dialogBox')
+  const closeBtn = document.getElementById('closeBtn')
+
+  const closeDialog = () => {
+    dialogBox?.classList.add('hidden')
+  }
+
+  closeBtn?.addEventListener('click', closeDialog)
+</script>
