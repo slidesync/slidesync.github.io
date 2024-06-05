@@ -10,7 +10,8 @@ import QRLogo from '../../public/qr.svg'
   <a href='#' class='text-lg'>DOWNLOADS</a>
   <!-- Button -->
   <button
-    class='bg-primary hover:bg-primaryDark text-white font-semibold py-2 px-3 rounded-lg flex items-center'>
+    id='btn'
+    class='bg-primary hover:bg-primaryDark text-white font-semibold py-2 px-3 rounded-lg flex items-center open-mobile-client-btn'>
     Mobile Client <Image
       src={QRLogo}
       alt='SlideSync Logo'
@@ -19,3 +20,12 @@ import QRLogo from '../../public/qr.svg'
     />
   </button>
 </div>
+
+<script>
+  const btn = document.getElementById('btn')
+  btn?.addEventListener('click', () => {
+    document
+      .querySelector('#side-menu')
+      ?.classList.add('transform', 'translate-x-full')
+  })
+</script>

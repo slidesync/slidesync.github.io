@@ -31,8 +31,7 @@ import Sidebar from './Sidebar.astro'
     <a href='#'>DOWNLOADS</a>
     <!-- Button -->
     <button
-      id='client-btn'
-      class='bg-primary hover:bg-primaryDark text-white font-semibold py-2 px-3 rounded-lg flex items-center'>
+      class='bg-primary hover:bg-primaryDark text-white font-semibold py-2 px-3 rounded-lg flex items-center open-mobile-client-btn'>
       Mobile Client <Image
         src={QRLogo}
         alt='SlideSync Logo'
@@ -83,6 +82,8 @@ import Sidebar from './Sidebar.astro'
   }
 
   const dialogBox = document.getElementById('dialogBox')
-  const clientBtn = document.getElementById('client-btn')
-  clientBtn?.addEventListener('click', openDialog)
+  const clientBtn = document.querySelectorAll('.open-mobile-client-btn')
+  clientBtn.forEach((btn) => {
+    btn.addEventListener('click', openDialog)
+  })
 </script>
